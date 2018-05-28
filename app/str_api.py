@@ -17,19 +17,19 @@ def set_kv():
     v = request.json['value']
     
     smap.set_kv(k, v)
-    response = vars(smap)
 
-    return jsonify(response)
+    return 'key: {}, value {} added'.format(k, v)
 
 @str_api.route('/delete_key/<key>', methods=['DELETE'])
 def delete(key):
     smap.delete_key(key)
-    # return 'deleted'
     return '{} deleted'.format(key)
 
-# @str_api.route('/get_keys')
-# def get_all_keys():
-#     pass
+@str_api.route('/get_all')
+def get_all():
+    response = vars(smap)
+
+    return jsonify(response)
 
 
 
