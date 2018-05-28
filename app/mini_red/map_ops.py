@@ -45,9 +45,3 @@ class MapMap():
     def map_del(self, k, map_key):
         pass
 
-# s = MapMap()
-# s.set_kv("c1", {"k1": "v1"})
-# s.set_kv("c2", {"k2": "v2", "k22": "v22"})
-# print(s.get('c2'))
-
-# print(s.map_get("c2", "k22"))

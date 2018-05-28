@@ -31,19 +31,6 @@ class StringMap():
     def get_keys(self):
         return [k for k in self._mapz.keys()]
 
-# s = StringMap()
-# s.add_entry("KBD", "v1")
-# s.add_entry("c1", "v2")
-# s.add_entry("c2", "v3")
-# print(s.get_key('c2'))
-
-# for k in s._mapz:
-#     print(k)
-
-# s.delete_key("c2")
-# print(s.get_key('c2'))
-
-
 
 
 

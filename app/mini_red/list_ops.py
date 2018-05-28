@@ -47,16 +47,3 @@ class ListMap():
         val = lst.pop()
         return val
         
-
-
-
-# s = ListMap()
-# s.set_kv("KBD", ["v1", "s1"])
-# s.set_kv("c1", ["v2", "s2", "z2"])
-# s.set_kv("c2", ["v3"])
-# # print(s.get('c1'))
-
-# s.append_value("c2", ["replace", "2x"])
-# print(s.get('c2'))
-
-# print(s.pop_key("c1"))
