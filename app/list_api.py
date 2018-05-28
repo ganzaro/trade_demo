@@ -39,7 +39,6 @@ def append_v():
 
 @list_api.route('/pop_key/<key>', methods=['PUT'])
 def pop_key(key):
-    k = request.json['key']
     lmap.pop_key(key)
     return 'popped'
 
