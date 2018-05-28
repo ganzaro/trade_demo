@@ -28,6 +28,8 @@ class StringMap():
     def delete_key(self, k):
         self._mapz.pop(k, None)
 
+    def get_keys(self):
+        return [k for k in self._mapz.keys()]
 
 # s = StringMap()
 # s.add_entry("KBD", "v1")
