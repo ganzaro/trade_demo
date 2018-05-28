@@ -12,9 +12,8 @@ class StringMap():
 
         self._mapz = {}
 
-    # TODO set, update
     def set_kv(self, k, v):
-        """Adds the pair (k, v) to the table"""
+        """Adds the pair (k, v)"""
         self._mapz[k] = v
 
     def contains(self, k):
@@ -23,9 +22,13 @@ class StringMap():
 
     def get(self, k):
         """Returns the value associated with the key"""
-        return self._mapz[k]
+        if self.contains(k):
+            return self._mapz[k]
+        else:
+            raise KeyError("Key not found")
 
     def delete_key(self, k):
+        """Delete the Map identified by key"""
         self._mapz.pop(k, None)
 
     def get_keys(self):

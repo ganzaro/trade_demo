@@ -16,9 +16,9 @@ class ListMap():
 
         self._mapz = {}
 
-    # TODO assert value is list type
     def set_kv(self, k, v):
-        """Adds the pair (k, v) to the table"""
+        """Adds the pair (k, v) """
+        # assert type(v) == list
         self._mapz[k] = v
 
     def contains(self, k):
@@ -27,7 +27,10 @@ class ListMap():
 
     def get(self, k):
         """Returns the value associated with the key"""
-        return self._mapz[k]
+        if self.contains(k):
+            return self._mapz[k]
+        else:
+            raise KeyError("Key not found")
 
     def delete_key(self, k):
         self._mapz.pop(k, None)

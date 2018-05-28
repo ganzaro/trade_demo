@@ -1,7 +1,7 @@
 from flask import jsonify, Blueprint, request
-
-str_api = Blueprint('string', __name__)
 from app.mini_red.str_ops import StringMap
+
+str_api = Blueprint('string', __name__,  url_prefix='/str')
 
 smap = StringMap()
 

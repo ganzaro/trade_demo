@@ -21,7 +21,7 @@ class MapMap():
 
 
     def set_kv(self, k, v):
-        """Adds the pair (k, v) to the table"""
+        """Adds the pair (k, v) """
         self._mapz[k] = v
 
     def contains(self, k):
@@ -30,13 +30,18 @@ class MapMap():
 
     def get(self, k):
         """Returns the value associated with the key"""
-        return self._mapz[k]
+        if self.contains(k):
+            return self._mapz[k]
+        else:
+            raise KeyError("Key not found")
 
     def delete_key(self, k):
+        """Delete the Map identified by key"""
         self._mapz.pop(k, None)
 
 
     def map_get(self, k, map_key):
+        """Return the String identified by mapkey"""
         val_map = self.get(k)
         return val_map[map_key]
 
