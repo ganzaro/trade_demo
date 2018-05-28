@@ -3,6 +3,7 @@
 GET key​ : Return the List value identified by key
 SET key value​ : Instantiate or overwrite a List identified by key with value value
 DELETE key​ : Delete the List identified by key
+APPEND key value​ : Append a String value to the end of the List identified by key
 POP key​ : Remove the last element in the List identified by key, and return that elt
 
 TODO

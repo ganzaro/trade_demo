@@ -24,7 +24,8 @@ def set_kv():
 @str_api.route('/delete_key/<key>', methods=['DELETE'])
 def delete(key):
     smap.delete_key(key)
-    return 'deleted'
+    # return 'deleted'
+    return '{} deleted'.format(key)
 
 # @str_api.route('/get_keys')
 # def get_all_keys():

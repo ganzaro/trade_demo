@@ -12,7 +12,9 @@ def create_app(config_name='development'):
     
     from app import str_api, list_api, map_api
     app.register_blueprint(str_api.str_api)
-    
+    app.register_blueprint(list_api.list_api)
+    # app.register_blueprint(str_api.str_api)
+
     @app.route('/help', methods = ['GET'])
     def help():
         """Print available functions."""
