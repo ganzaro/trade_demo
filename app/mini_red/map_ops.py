@@ -35,13 +35,20 @@ class MapMap():
     def delete_key(self, k):
         self._mapz.pop(k, None)
 
+
     def map_get(self, k, map_key):
         val_map = self.get(k)
         return val_map[map_key]
 
+
     def map_set(self, k, map_key, map_val):
+        """Add the mapping mapkey -> mapvalue to the
+        Map identified by key."""
         pass
 
+
     def map_del(self, k, map_key):
-        pass
+        """Delete the value identified by mapkey from the Map"""
+        mapval = self.get(k)
+        mapval.pop(map_key, None)
 

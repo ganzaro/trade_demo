@@ -38,3 +38,11 @@ def map_get(key, map_key):
     val = mmap.map_get(key, map_key)
     return json.dumps(val)
 
+
+# @map_api.route('/map_set')
+
+@map_api.route('/map_del/<key>/<map_key>', methods=['DELETE'])
+def map_del(key, map_key):
+    mmap.map_del(key, map_key)
+    return 'deleted'
+
