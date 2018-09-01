@@ -1,9 +1,8 @@
 import json
 from flask import jsonify, Blueprint, request
 
-from app.mini_red.list_ops import ListMap
+from app.mini_red.mini_redis import lmap
 
-lmap = ListMap()
 list_api = Blueprint('list', __name__,  url_prefix='/list')
 
 

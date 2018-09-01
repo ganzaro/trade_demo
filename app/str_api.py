@@ -1,9 +1,7 @@
 from flask import jsonify, Blueprint, request
-from app.mini_red.str_ops import StringMap
+from app.mini_red.mini_redis import smap
 
 str_api = Blueprint('string', __name__,  url_prefix='/str')
-
-smap = StringMap()
 
 @str_api.route('/get/<key>')
 def get(key):

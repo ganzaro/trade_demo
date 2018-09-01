@@ -1,9 +1,8 @@
 import json
 from flask import jsonify, Blueprint, request
 
-from app.mini_red.map_ops import MapMap
+from app.mini_red.mini_redis import mmap
 
-mmap = MapMap()
 map_api = Blueprint('map', __name__,  url_prefix='/map')
 
 @map_api.route('/get/<key>')

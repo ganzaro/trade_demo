@@ -1,29 +1,29 @@
 
 create a virtualenv, install deps
 
-export FLASK_CONFIG=development
+    export FLASK_CONFIG=development
 
-export FLASK_APP=run.py
+    export FLASK_APP=run.py
 
-export FLASK_DEBUG=1
+    export FLASK_DEBUG=1
 
 
-flask run
+    flask run
 
-localhost:5000
+    localhost:5000
 
 list all routes : 
- http://localhost:5000/help
+    http://localhost:5000/help
 
 
 --------
 Examples
 
-localhost:5000/str/set_kv
+    localhost:5000/str/set_kv
 
-localhost:5000/list/set_kv
+    localhost:5000/list/set_kv
 
-localhost:5000/map/set_kv
+    localhost:5000/map/set_kv
 
 
 -------
